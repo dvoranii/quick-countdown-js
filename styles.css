@@ -1,0 +1,231 @@
+/* COLOUR SCHEME */
+/* 
+Main: #FCA311
+Secondary: #14213D
+Text: #000000 $ #FFFFFF
+Secondary BG: #E5E5E5
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+}
+
+p {
+  font-size: 12pt;
+}
+
+.wrapper--outer {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.wrapper--inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper--logo-section {
+  position: relative;
+  height: 100%;
+}
+
+.wrapper--logo-section::before {
+  content: "";
+  background-image: url("/assets/white-brush-stroke-texture-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* You can adjust this value as needed */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.wrapper--logo-section,
+.wrapper--cta-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper--cta-section {
+  /* background-color: #ffc300; */
+  background-color: #fca311;
+  height: 100%;
+}
+
+.wrapper--logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper--logo h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 36pt;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000814;
+
+  padding-top: 1.2rem;
+}
+
+.wrapper--cta-section h1 {
+  color: #000814;
+  font-size: 48pt;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.wrapper--cta-section {
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+}
+
+.wrapper--btn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2.4rem;
+  /* border-bottom: 2px solid #001d3d; */
+}
+
+.wrapper--cta-section button {
+  font-family: "Noto Sans Cypro Minoan", sans-serif;
+  font-size: 14pt;
+  margin-top: 2.4rem;
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: none;
+  letter-spacing: 0.5px;
+  /* background: #001d3d; */
+  background: #14213d;
+  color: #ffffff;
+  transition: all 250ms ease;
+}
+
+.wrapper--cta-section button:hover {
+  cursor: pointer;
+  background-color: #003566;
+}
+
+.wrapper--social-icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+  padding-top: 2.2rem;
+}
+.wrapper--icon img {
+  width: 40px;
+}
+
+.wrapper--icon.icon-1 img {
+  filter: saturate(100%);
+}
+
+.wrapper--icon.icon-3 img {
+  width: 34px;
+  margin-top: 4px;
+  filter: brightness(0);
+}
+
+.img-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.img-wrapper img {
+  width: 180px;
+  padding: 25px;
+}
+
+/* TIMER */
+
+.timer--outer {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.timer {
+  font-size: 32pt;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 0.2fr;
+  width: fit-content;
+  margin: 40vh auto;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+
+.cell-1 {
+  border-left: 2px solid black;
+}
+.cell-1,
+.cell-2,
+.cell-3,
+.cell-4 {
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.cell-1,
+.cell-2,
+.cell-3,
+.cell-4 {
+  border-bottom: 2px solid black;
+}
+
+.cell-1,
+.cell-2 {
+  background-color: #fca311;
+}
+
+.cell-3,
+.cell-4 {
+  background-color: #e5e5e5;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.label {
+  font-size: 8pt;
+  text-align: center;
+  margin-top: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
